@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>tube audio stream</title>
+    </head>
+    <body>
+        <p>Hi</p>
+        <audio controls src="jam24feb.mp3"></audio>
+        <script type="text/javascript">
+            var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            var mp3File = document.querySelector("audio");
+            var source = audioCtx.createMediaElementSource(mp3File);
+            source.connect(audioCtx.destination);
+        </script>
+    </body>
+</html>
